@@ -7,7 +7,7 @@ export interface IconProps {
   size?: string;
   children: string;
   transform?: string;
-  variant?: "small" | "medium" | "large";
+  variant?: "small" | "medium" | "large" | "x-large";
   color?: colorOptions;
   defaultcolor?: "currentColor" | "auto";
 }

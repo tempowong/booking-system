@@ -26,7 +26,7 @@ const list = [
   {
     title: "Home",
     icon: "home",
-    href: "/",
+    href: "/ecgoathome",
   },
   {
     title: "Category",

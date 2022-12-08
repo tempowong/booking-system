@@ -15,6 +15,13 @@ const Profile = () => {
     return (
         <div>
             <Grid container spacing={6}>
+                <Grid item lg={6} md={6} sm={6} xs={6} >
+                    <a href="/login">
+                        <Button variant="outlined" color="#FFBB0C">
+                            登入/註冊
+                        </Button>
+                    </a>
+                </Grid>
 
                 <Grid item lg={6} md={6} sm={12} xs={12}>
                     <Grid container spacing={6}>
@@ -29,10 +36,10 @@ const Profile = () => {
                                         height="100%"
                                         p="1rem 1.25rem"
                                     >
-                                        <Icon className="icon" variant="large" color={item.color}>
+                                        <Icon className="icon" variant="x-large" color={item.color}>
                                             {item.icon}
                                         </Icon>
-                                        <H5 color="#626262" my="0px" fontWeight="600">
+                                        <H5 color="#626262">
                                             {item.title}
                                         </H5>
                                     </FlexBox>

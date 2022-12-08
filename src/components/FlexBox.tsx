@@ -13,7 +13,7 @@ import {
 } from "styled-system";
 import Box from "./Box";
 
-const FlexBox = styled(Box)<
+const FlexBox = styled(Box) <
   FlexboxProps & LayoutProps & SpaceProps & ColorProps & BorderProps
 >`
   display: flex;
