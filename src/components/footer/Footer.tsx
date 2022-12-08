@@ -10,6 +10,7 @@ import FlexBox from "../FlexBox";
 import Grid from "../grid/Grid";
 import Icon from "../icon/Icon";
 import Typography, { Paragraph } from "../Typography";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const StyledLink = styled.a`
   position: relative;
@@ -24,7 +25,8 @@ const StyledLink = styled.a`
 `;
 
 const Footer: React.FC = () => {
-  return (
+  const width = useWindowSize();
+  return (width >= 900 && (
     <footer>
       <Box bg="#0F3460">
         <Container p="1rem" color="white">
@@ -135,7 +137,7 @@ const Footer: React.FC = () => {
         </Container>
       </Box>
     </footer>
-  );
+  ));
 };
 
 const aboutLinks = [

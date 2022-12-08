@@ -8,10 +8,12 @@ import MenuItem from "../MenuItem";
 import NavLink from "../nav-link/NavLink";
 import { Small } from "../Typography";
 import StyledTopbar from "./Topbar.style";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Topbar: React.FC = () => {
   const [currency, setCurrency] = useState(currencyList[0]);
   const [language, setLanguage] = useState(languageList[0]);
+  const width = useWindowSize();
 
   const handleCurrencyClick = (curr) => () => {
     setCurrency(curr);
@@ -26,7 +28,7 @@ const Topbar: React.FC = () => {
     // console.log(navigator.language);
   }, []);
 
-  return (
+  return (width >= 900 && (
     <StyledTopbar>
       <Container
         display="flex"
@@ -110,7 +112,7 @@ const Topbar: React.FC = () => {
         </FlexBox>
       </Container>
     </StyledTopbar>
-  );
+  ));
 };
 
 const languageList = [

@@ -15,6 +15,8 @@ import Sidenav from "../sidenav/Sidenav";
 import { Tiny } from "../Typography";
 import StyledHeader from "./HeaderStyle";
 import UserLoginDialog from "./UserLoginDialog";
+import useWindowSize from "../../hooks/useWindowSize";
+
 
 type HeaderProps = {
   isFixed?: boolean;
@@ -26,6 +28,7 @@ const Header: React.FC<HeaderProps> = ({ isFixed, className }) => {
   const toggleSidenav = () => setOpen(!open);
   const { state } = useAppContext();
   const { cartList } = state.cart;
+  const width = useWindowSize();
 
   const cartHandle = (
     <FlexBox ml="20px" alignItems="flex-start">
@@ -52,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ isFixed, className }) => {
     </FlexBox>
   );
 
-  return (
+  return (width >= 900 && (
     <StyledHeader className={className}>
       <Container
         display="flex"
@@ -108,7 +111,7 @@ const Header: React.FC<HeaderProps> = ({ isFixed, className }) => {
         </FlexBox>
       </Container>
     </StyledHeader>
-  );
+  ));
 };
 
 export default Header;

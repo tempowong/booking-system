@@ -7,8 +7,6 @@ import StyledMobileNavigationBar from "./MobileNavigationBar.style";
 const MobileNavigationBar: React.FC = () => {
   const width = useWindowSize();
 
-
-
   return (
     width <= 900 && (
       <StyledMobileNavigationBar>
