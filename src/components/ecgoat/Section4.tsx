@@ -13,13 +13,13 @@ const Section4: React.FC = () => {
     <Box mb="3.75rem">
       <Container>
         <Box>
-          <Grid container spacing={6}>
+          <Grid container spacing={2}>
             <Grid item lg={6} xs={12}>
               <CategorySectionHeader
                 title="專科列表"
               />
 
-              <Grid container spacing={4}>
+              <Grid container>
                 {topRatedList.map((item) => (
                   <Grid item md={3} sm={6} xs={6} key={item.title}>
                     <Link href={item.productUrl}>
