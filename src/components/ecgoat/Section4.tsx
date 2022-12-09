@@ -5,7 +5,7 @@ import Box from "../Box";
 import CategorySectionHeader from "../CategorySectionHeader";
 import Container from "../Container";
 import Grid from "../grid/Grid";
-import ProductCard4 from "../product-cards/ProductCard4";
+import ProductCardSpedList from "../product-cards/ProductCardSpedList";
 import ProductCard5 from "../product-cards/ProductCard5";
 
 const Section4: React.FC = () => {
@@ -16,43 +16,21 @@ const Section4: React.FC = () => {
           <Grid container spacing={6}>
             <Grid item lg={6} xs={12}>
               <CategorySectionHeader
-                iconName="ranking-1"
-                title="Top Ratings"
-                seeMoreLink="#"
+                title="專科列表"
               />
-              <Card p="1rem">
-                <Grid container spacing={4}>
-                  {topRatedList.map((item) => (
-                    <Grid item md={3} sm={6} xs={6} key={item.title}>
-                      <Link href={item.productUrl}>
-                        <a>
-                          <ProductCard4 {...item} />
-                        </a>
-                      </Link>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Card>
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CategorySectionHeader
-                iconName="Group"
-                title="Featured Brands"
-                seeMoreLink="#"
-              />
-              <Card p="1rem">
-                <Grid container spacing={4}>
-                  {brandList.map((item) => (
-                    <Grid item sm={6} xs={12} key={item.title}>
-                      <Link href={item.productUrl}>
-                        <a>
-                          <ProductCard5 {...item} />
-                        </a>
-                      </Link>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Card>
+
+              <Grid container spacing={4}>
+                {topRatedList.map((item) => (
+                  <Grid item md={3} sm={6} xs={6} key={item.title}>
+                    <Link href={item.productUrl}>
+                      <a>
+                        <ProductCardSpedList {...item} />
+                      </a>
+                    </Link>
+                  </Grid>
+                ))}
+              </Grid>
+
             </Grid>
           </Grid>
         </Box>
@@ -63,7 +41,7 @@ const Section4: React.FC = () => {
 
 const topRatedList = [
   {
-    imgUrl: "/assets/images/products/camera-1.png",
+    imgUrl: "/assets/images/lists/med.svg",
     title: "Camera",
     rating: 4,
     price: 3300,
@@ -71,7 +49,7 @@ const topRatedList = [
     productUrl: "/product/d1",
   },
   {
-    imgUrl: "/assets/images/products/shoes-2.png",
+    imgUrl: "/assets/images/lists/tra.svg",
     title: "Shoe",
     rating: 4.75,
     price: 400,
@@ -79,7 +57,7 @@ const topRatedList = [
     productUrl: "/product/d12",
   },
   {
-    imgUrl: "/assets/images/products/mobile-1.png",
+    imgUrl: "/assets/images/lists/oag.svg",
     title: "Phone",
     rating: 5,
     price: 999,
@@ -87,25 +65,28 @@ const topRatedList = [
     productUrl: "/product/d14",
   },
   {
-    imgUrl: "/assets/images/products/watch-1.png",
+    imgUrl: "/assets/images/lists/child.svg",
     title: "Watch",
     rating: 5,
     price: 999,
     reviewCount: 75,
     productUrl: "/product/d16",
   },
-];
-
-const brandList = [
   {
-    imgUrl: "/assets/images/products/london-britches.png",
-    title: "London Britches",
-    productUrl: "/product/e1",
+    imgUrl: "/assets/images/lists/skin.svg",
+    title: "Watch",
+    rating: 5,
+    price: 999,
+    reviewCount: 75,
+    productUrl: "/product/d16",
   },
   {
-    imgUrl: "/assets/images/products/jim and jiko.png",
-    title: "Jim & Jago",
-    productUrl: "/product/e14",
+    imgUrl: "/assets/images/lists/face.svg",
+    title: "Watch",
+    rating: 5,
+    price: 999,
+    reviewCount: 75,
+    productUrl: "/product/d16",
   },
 ];
 

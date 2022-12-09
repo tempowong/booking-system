@@ -9,37 +9,12 @@ const Section2: React.FC = () => {
   const [visibleSlides, setVisibleSlides] = useState(4);
   const width = useWindowSize();
 
-  useEffect(() => {
-    if (width < 500) setVisibleSlides(1);
-    else if (width < 650) setVisibleSlides(2);
-    else if (width < 950) setVisibleSlides(3);
-    else setVisibleSlides(4);
-  }, [width]);
+
 
   return (
-    <CategorySectionCreator
-      iconName="light"
-      title="Flash Deals"
-      seeMoreLink="#"
-    >
-      <Box mt="-0.25rem" mb="-0.25rem">
-        <Carousel totalSlides={10} visibleSlides={visibleSlides}>
-          {productList.map((item, ind) => (
-            <Box py="0.25rem" key={ind}>
-              <ProductCard1
-                id={ind}
-                imgUrl={item.imgUrl}
-                title="Smart watch black"
-                rating={4}
-                price={250}
-                off={56}
-                key={ind}
-              />
-            </Box>
-          ))}
-        </Carousel>
-      </Box>
-    </CategorySectionCreator>
+    <div>
+      <img src={"/assets/images/banners/searchBanner.svg"} style={{ width: '100%' }}></img>
+    </div>
   );
 };
 

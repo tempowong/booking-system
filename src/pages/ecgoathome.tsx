@@ -1,5 +1,5 @@
 import Box from "@component/Box";
-import Section3 from "@component/ecgoat/Section2";
+import Section3 from "@component/ecgoat/Section3";
 import Section1 from "@component/ecgoat/Section1";
 import Section2 from "@component/ecgoat/Section2";
 import Section4 from "@component/ecgoat/Section4";
@@ -12,15 +12,10 @@ import AppLayout from "../components/layout/AppLayout";
 const ECGIndexPage = () => {
     return (
         <Fragment>
-            <Container my="2rem">
-                <Section1 />
-                <Box mb="3.75rem">
-                    <Section2 />
-                </Box>
-                <Section3 />
-                <Section4 />
-                <Section5 />
-            </Container>
+            <Section1 />
+            <Section2 />
+            <Section4 />
+            <Section5 />
         </Fragment>
     );
 };
