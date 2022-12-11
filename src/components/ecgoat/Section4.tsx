@@ -1,4 +1,3 @@
-import Card from "@component/Card";
 import Link from "next/link";
 import React from "react";
 import Box from "../Box";
@@ -6,7 +5,6 @@ import CategorySectionHeader from "../CategorySectionHeader";
 import Container from "../Container";
 import Grid from "../grid/Grid";
 import ProductCardSpedList from "../product-cards/ProductCardSpedList";
-import ProductCard5 from "../product-cards/ProductCard5";
 
 const Section4: React.FC = () => {
   return (

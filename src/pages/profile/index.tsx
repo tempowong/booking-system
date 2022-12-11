@@ -1,12 +1,10 @@
-import Box from "@component/Box";
+
 import Button from "@component/buttons/Button";
 import Card from "@component/Card";
 import FlexBox from "@component/FlexBox";
 import Grid from "@component/grid/Grid";
 import DashboardLayout from "@component/layout/CustomerDashboardLayout";
-import DashboardPageHeader from "@component/layout/DashboardPageHeader";
-import TableRow from "@component/TableRow";
-import Typography, { H3, H5, Small } from "@component/Typography";
+import H5 from "@component/Typography";
 import React from "react";
 import Icon from "@component/icon/Icon";
 import Link from "next/link";
@@ -17,7 +15,7 @@ const Profile = () => {
             <Grid container spacing={6}>
                 <Grid item lg={6} md={6} sm={6} xs={6} >
                     <a href="/login">
-                        <Button variant="outlined" color="#FFBB0C">
+                        <Button variant="outlined">
                             登入/註冊
                         </Button>
                     </a>
@@ -36,7 +34,7 @@ const Profile = () => {
                                         height="100%"
                                         p="1rem 1.25rem"
                                     >
-                                        <Icon className="icon" variant="x-large" color={item.color}>
+                                        <Icon className="icon" variant="x-large">
                                             {item.icon}
                                         </Icon>
                                         <H5 color="#626262">
